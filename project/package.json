@@ -1,0 +1,34 @@
+{
+  "name": "tiktak-service-permission",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "https://github.com/tiktakTime/tiktak-service-partners",
+  "author": "Codelisa Development Studio",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.1221.0",
+    "body-parser": "^1.20.2",
+    "crypted-jwt": "^1.0.4",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "easy-redis-connector": "^1.0.8",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "kafkajs": "^2.2.4",
+    "moment": "^2.29.4",
+    "mongoose": "^8.0.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-azure-blob-storage": "^1.2.0",
+    "multer-s3": "2.10.0",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.0",
+    "uuid": "^9.0.1"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon src/server.js",
+    "start": "NODE_ENV=production nodemon src/server.js"
+  }
+}

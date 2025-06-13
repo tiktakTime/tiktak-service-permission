@@ -1,0 +1,47 @@
+[
+  {
+    "code": 1000,
+    "messages": [
+      {
+        "language": "TR",
+        "text": "Üzerinizde Aktif Çalışma Bulunmaktadır."
+      }
+    ]
+  },
+  {
+    "code": 1001,
+    "messages": [
+      {
+        "language": "TR",
+        "text": "Bu çalışma size ait değildir."
+      }
+    ]
+  },
+  {
+    "code": 1002,
+    "messages": [
+      {
+        "language": "TR",
+        "text": "Moladan dönmeden işi bitiremezsiniz."
+      }
+    ]
+  },
+  {
+    "code": 1003,
+    "messages": [
+      {
+        "language": "TR",
+        "text": "Bu çalışma zaten bitmiş."
+      }
+    ]
+  },
+  {
+    "code": 2000,
+    "messages": [
+      {
+        "language": "TR",
+        "text": "Böyle bir çalışma bulunamadı."
+      }
+    ]
+  }
+]

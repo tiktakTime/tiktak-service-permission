@@ -1,4 +1,4 @@
-const partnersR = require('./partners')
+const permissionR = require('./permission')
 const regionsR = require('./regions')
 const conditionsR = require('./conditions')
 const conditionAttributesR = require('./conditionAttributes')
@@ -20,7 +20,7 @@ module.exports = {
     roomConditionsR,
     roomTypesR,
     roomWorksR,
-    partnersR,
+    permissionR,
     regionsR,
     conditionsR,
     conditionAttributesR,

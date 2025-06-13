@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
-const validates = require('../validations/partners')
-const services = require('../services/partners')
+const validates = require('../validations/permission')
+const services = require('../services/permission')
 
 // Yeni bir Partner firma oluşturur.
 router.post('/', validates.create, services.create)

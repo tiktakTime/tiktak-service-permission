@@ -1,4 +1,4 @@
-const { regionsR, partnersR} = require('../repos')
+const { regionsR, permissionR} = require('../repos')
 const errorException = require('../utils/errorException')
 const kafka = require("../utils/kafka");
 

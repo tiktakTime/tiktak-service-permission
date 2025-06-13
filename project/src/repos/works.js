@@ -1,6 +1,6 @@
 const {Op} = require('sequelize')
 const model = require('../models/works')
-const partner = require('../models/partners')
+const partner = require('../models/permission')
 const region = require('../models/regions')
 const condition = require('../models/conditions')
 const attributes = require('../models/attributes')

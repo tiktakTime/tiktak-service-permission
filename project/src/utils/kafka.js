@@ -1,6 +1,6 @@
 const { Kafka, Partitioners } = require('kafkajs')
 
-const topicName = process.env.NODE_ENV === 'dev' ? 'partners-test' : 'partners-live'
+const topicName = process.env.NODE_ENV === 'dev' ? 'permission-test' : 'permission-live'
 const groupId = 'GroupPartnerConsumer'
 
 const kafka = new Kafka({
@@ -56,7 +56,7 @@ exports.producer = async data => {
 }
 
 
-const {partnersR, regionsR} = require('../repos')
+const {permissionR, regionsR} = require('../repos')
 const updateDatabase = async (message) => {
     const stringPayload = message.toString()
     const objectPayload = JSON.parse(stringPayload)
@@ -70,7 +70,7 @@ const updateDatabase = async (message) => {
             leaderAvatar: data.avatar
         }, { leaderId: data.id })
 
-        await partnersR.update({
+        await permissionR.update({
             leaderFirstName: data.firstName,
             leaderLastName: data.lastName,
             leaderAvatar: data.avatar

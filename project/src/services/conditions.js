@@ -1,4 +1,4 @@
-const { conditionsR, conditionAttributesR, partnersR, attributesR} = require('../repos')
+const { conditionsR, conditionAttributesR, permissionR, attributesR} = require('../repos')
 const errorException = require('../utils/errorException')
 const kafka = require('../utils/kafka')
 const { v4: uuidv4 } = require('uuid')
@@ -60,7 +60,7 @@ exports.attributesList = async (req, res) =>  {
     try {
 
         const thisCondition = await conditionsR.one({ id: body.id })
-        const thisPartner = await partnersR.one({ id: thisCondition.partnerId })
+        const thisPartner = await permissionR.one({ id: thisCondition.partnerId })
         const thisAttributes = await attributesR.list({ parent: thisPartner.type, companyId: member.companyId })
 
         const step1Attributes = Object.assign([], thisAttributes)

@@ -7,7 +7,7 @@ const db = require('../utils/db')
 
 const options = {
     sequelize: db,
-    modelName: 'partners'
+    modelName: 'permission'
 }
 
 const columns = {

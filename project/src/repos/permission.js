@@ -1,4 +1,4 @@
-const model = require('../models/partners')
+const model = require('../models/permission')
 model.sync({force: false})
 
 exports.create = async body => {

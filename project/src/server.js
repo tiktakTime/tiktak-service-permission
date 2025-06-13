@@ -5,7 +5,6 @@ const parser = require('body-parser')
 express.use(parser.json({ limit: '500kb' }))
 express.use(parser.urlencoded({ limit: '500kb', extended: true }))
 
-const redisAdaptor = require('./utils/redisAdaptor')
 express.use(async(req, res, next) => {
     console.log(req.originalUrl)
     if (req.headers.rediskey) {
@@ -19,9 +18,6 @@ express.use(async(req, res, next) => {
 })
 
 express.use('/permission', require('./router'))
-
-const {initialize, consumer} = require('./utils/kafka')
-initialize().then(() => { consumer() })
 
 express.listen(7015, () => {
     console.log('-------------------------------------------')

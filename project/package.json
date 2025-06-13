@@ -2,7 +2,7 @@
   "name": "tiktak-service-permission",
   "version": "1.0.0",
   "main": "src/server.js",
-  "repository": "https://github.com/tiktakTime/tiktak-service-partners",
+  "repository": "https://github.com/tiktakTime/tiktak-service-permission",
   "author": "Codelisa Development Studio",
   "license": "MIT",
   "private": true,

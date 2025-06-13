@@ -1,5 +1,5 @@
 const { Op } = require('sequelize')
-const {worksR, workTimesR, workValuesR, roomTypesR, roomWorksR, partnersR} = require('../repos')
+const {worksR, workTimesR, workValuesR, roomTypesR, roomWorksR, permissionR} = require('../repos')
 const errorException = require('../utils/errorException')
 const moment = require('moment')
 const generateTitle = require('../utils/generateTitle')
@@ -25,7 +25,7 @@ exports.create = async (req, res) =>  {
         body.personAvatar = member.avatar
         body.personName = `${member.firstName} ${member.lastName}`
 
-        const thisPartner = await partnersR.one({ id: body.partnerId })
+        const thisPartner = await permissionR.one({ id: body.partnerId })
         body.type = thisPartner.type
 
         const newWork = await worksR.create(body)
@@ -78,7 +78,7 @@ exports.update = async (req, res) =>  {
             throw 2000
         }
 
-        const thisPartner = await partnersR.one({ id: body.partnerId })
+        const thisPartner = await permissionR.one({ id: body.partnerId })
         body.type = thisPartner.type
 
         // Bu kondisyona ait olan veri türlerini işlememiz lazım.

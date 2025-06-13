@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
 
-router.use('/partners', require('./routes/partners'))
+router.use('/permission', require('./routes/permission'))
 router.use('/regions', require('./routes/regions'))
 router.use('/conditions', require('./routes/conditions'))
 router.use('/works', require('./routes/works'))

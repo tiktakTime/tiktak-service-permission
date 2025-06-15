@@ -24,7 +24,7 @@ express.use('/permission', require('./router'))
 const {initialize, consumer} = require('./utils/kafka')
 initialize().then(() => { consumer() })
 
-express.listen(7014, () => {
+express.listen(7016, () => {
     console.log('-------------------------------------------')
     console.log('Tiktak Service Permission')
     console.log('PORT: 7016')

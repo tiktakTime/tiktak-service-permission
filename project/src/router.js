@@ -1,5 +1,7 @@
 const router = require('express').Router()
 
-router.use('/attributes', require('./routes/attributes'))
+router.get('/', (req, res) => {
+    res.send('Permission service is working 🚀')
+})
 
 module.exports = router

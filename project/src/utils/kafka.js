@@ -56,27 +56,27 @@ exports.producer = async data => {
 }
 
 
-const {permissionR, regionsR} = require('../repos')
-const updateDatabase = async (message) => {
-    const stringPayload = message.toString()
-    const objectPayload = JSON.parse(stringPayload)
-
-    if (objectPayload.title === 'person') {
-        const {data} = objectPayload
-
-        await regionsR.update({
-            leaderFirstName: data.firstName,
-            leaderLastName: data.lastName,
-            leaderAvatar: data.avatar
-        }, { leaderId: data.id })
-
-        await permissionR.update({
-            leaderFirstName: data.firstName,
-            leaderLastName: data.lastName,
-            leaderAvatar: data.avatar
-        }, { leaderId: data.id })
-    }
-}
+// const {permissionR, regionsR} = require('../repos')
+// const updateDatabase = async (message) => {
+//     const stringPayload = message.toString()
+//     const objectPayload = JSON.parse(stringPayload)
+//
+//     if (objectPayload.title === 'person') {
+//         const {data} = objectPayload
+//
+//         await regionsR.update({
+//             leaderFirstName: data.firstName,
+//             leaderLastName: data.lastName,
+//             leaderAvatar: data.avatar
+//         }, { leaderId: data.id })
+//
+//         await permissionR.update({
+//             leaderFirstName: data.firstName,
+//             leaderLastName: data.lastName,
+//             leaderAvatar: data.avatar
+//         }, { leaderId: data.id })
+//     }
+// }
 
 exports.sendLog = async (member, type, url) => {
     const { firstName, lastName, companyId, id } = member
